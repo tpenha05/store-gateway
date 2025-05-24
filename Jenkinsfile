@@ -1,8 +1,12 @@
 pipeline {
     agent any
+    tools {
+        maven 'maven-3'
+        jdk 'jdk-21'
+    }
     environment {
         SERVICE = 'gateway'
-        NAME = "humbertosandmann/${env.SERVICE}"
+        NAME = "tpenha05/${env.SERVICE}"
     }
     stages {
         stage('Build') { 
